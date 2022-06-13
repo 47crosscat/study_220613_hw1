@@ -1,0 +1,21 @@
+# 2.1
+# a. Всё, что будет появляться в каталоге build
+/build/
+# b. Все jar-файлы, кроме module2.jar
+*.jar
+!src/main/modules/module2/build/module2.jar
+# c. application-local.properties
+application-local.properties 
+# d. папку .idea полностью
+.idea/*
+# e. папку .idea_copy кроме файла workspace.xml
+.idea_copy/*
+!.idea_copy/workspace.xml
+
+# 2.2
+# Исключаем все папки build
+**/build/
+# Файлы с именем "build" не должны игнорироваться.
+!build.*
+# Добавить пояснение: "файл module2.jar из п 2.1.b по-прежнему не должен игнорироваться"
+!src/main/modules/module2/build/
